@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- このHTMLの文字コードはUTF-8だとブラウザに説明するための宣言 -->
+    <meta charset="UTF-8">
+    <!-- ウェブページを表示する際に、きちんと正しく表示させるためのおまじない。入れないといけないもの -->
+    <meta name="viewport" content="width=device-width,install-scale=1.0">
+    <meta http-equiv="X-UA=Compatible" content="ie=edge">
+    <!-- ページのタイトル指定 -->
+    <title>Weed Classifier</title>
+    <!-- CSSの読み込みをする部分。href=""にCSSファイルのおいている場所とファイル名を渡す。 -->
+    <link rel="stylesheet" href="./static/stylesheet.css">
+</head>
+<!-- body要素がウェブページに表示される部分 -->
+<body>
+    <header>
+        <!-- ページに画像を入れたい場合にsrcに画像URLを入れる -->
+        <img class="header_img" src="https://illust-ryokka.jp/wp-content/uploads/2018/01/Grass-4.png" alt="weed">
+        <!-- テキストにリンクをつける -->
+        <a class="header-logo" href="#">Weed classfier</a>
+    </header>
+
+    <!-- divは要素をグループ化するために使用される -->
+    <div class="main">
+        <!-- 見出しの要素 -->
+        <h2>雑草を識別します</h2>
+        <!-- パラグラフのp。基本的には文章を入力する際に使う。 -->
+        <p>雑草画像を送信してください</p>
+        <!-- form要素は入力フォームを作成。POSTリクエストで画像をアップロードするということを指す。 -->
+        <form method="POST" enctype="multipart/form-data">
+            <!-- ファイルのアップローダーの作成 -->
+            <input class="file_choose" type="file" name="file">
+            <!-- 送信ボタンの作成 -->
+            <input class="btn" value="submit!" type="submit">
+        </form>
+        <div class-"answer">{{answer}}</div>
+    </div>
+
+    <footer>
+        <img class="footer_img" src="https://illust-ryokka.jp/wp-content/uploads/2018/01/Grass-4.png" alt="weed" alt="weed">
+        <small>&copy;イラスト緑花（RYOKKA）</small>
+    </footer>
+</body>
+
